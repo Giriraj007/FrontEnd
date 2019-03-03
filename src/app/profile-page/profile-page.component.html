@@ -1,0 +1,129 @@
+<app-nar-bar-login></app-nar-bar-login>
+
+<div class="container-fluid back mt-5">
+  <div class="cont">
+
+  <div class="row">
+
+    <div class="col-lg-4 text-center">
+
+
+      <div class="circular   text-center mt-5 mb-5">{{this.User.user_name[0]}}</div>
+    </div>
+    <div class="col-lg-8 mt-5">
+      <h2 class="text-white mt-4 "><strong>{{this.User.user_name}}</strong></h2>
+      <h5 class="text-white">(Member since 2018)</h5>
+      <h5 class="text-white">Total Rated: {{movies?.length}}</h5>
+      
+    </div>
+  </div>
+</div>
+
+</div> -->
+
+
+
+
+ <div class="container">
+   
+    <ul class="nav nav-tabs" role="tab-list">
+      <li style="width:50%"  class=" text-center"><a data-toggle="tab" class="nav-link " href="#Rated">Rated</a></li>
+      <li style="width:50%" class="text-center" ><a data-toggle="tab" class="nav-link" href="#Favourite">Favourite</a></li>
+     
+    </ul>
+  
+  
+    <div class="tab-content">
+      <div id="Rated"  class="tab-pane  active">
+          <div class=row>
+
+              <div class="col-lg-6 mt-3" *ngFor="let movie of movies">
+      
+      
+      
+                  <div class="card shadow" >
+                    
+                    <div class="row">
+                      <div class="col-lg-4">
+                      <img class="card-img-top size " src={{movie?.mov_image_url}} alt="Card image cap">
+                    </div>
+                   
+                      <div class="col-lg-7">
+      
+                      <div class="card-body">
+                        <h5 class="card-title">{{movie?.mov_name}}</h5>
+                        <h5 class="card-title">November 21,{{movie?.year}}</h5>
+                        <p class="card-text">{{movie?.mov_description}}</p>
+                      </div>
+                      
+                      <div class="card-footer">
+
+                        <div class="row">
+
+                          <div class="col-lg-6"><a><i [class.red]='movie.isfav'class="fas fa-heart mr-2  "style="font-size: 30px; " title="Login to Add Fav" ></i></a>Favorite</div>
+                          <div class="col-lg-6"> <a> <i class="fas fa-star  iconcolor2"placement="top" ngbTooltip="Tooltip on top" title="login to rate" style="font-size: 30px"></i></a>{{movie?.user}}</div>
+                        
+                        </div>
+                        
+                       
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+       </div>
+      <div id="Favourite" class="tab-pane fade">
+          <div class=row>
+
+              <div class="col-lg-6 mt-3 " *ngFor="let array of fav_movies_details">
+      
+      
+      
+                  <div class="card shadow " >
+                    
+                    <div class="row">
+                      <div class="col-lg-4">
+                      <img class="card-img-top size " src={{array?.mov_image_url}} alt="Card image cap">
+                    </div>
+                   
+                      <div class="col-lg-7" >
+      
+                      <div class="card-body">
+                        <h5 class="card-title">{{array?.mov_name}}</h5>
+                        <h5 class="card-title">November 21,{{array?.year}}</h5>
+                        <p class="card-text">{{array?.mov_description|slice:0:50}}</p>
+                      </div>
+                      
+                      <div class="card-footer mr-0">
+                          <div class="row">
+                          <div class="col-lg-6"><a><i class="fas fa-heart mr-2 red "style="font-size: 30px; " title="Login to Add Fav" ></i></a>Favorite</div>
+                          <div class="col-lg-6"> <a> <i class="fas fa-star  iconcolor2"placement="top" ngbTooltip="Tooltip on top" title="login to rate" style="font-size: 30px"></i></a>{{array?.isfav}}</div>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+         </div>
+
+      
+    </div>
+    </div>
+    <br><br><br>
+    <app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+ 
+  
+  

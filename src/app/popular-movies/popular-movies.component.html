@@ -1,0 +1,102 @@
+<app-nar-bar-login *ngIf="this.service.isloggedin"></app-nar-bar-login>
+
+   <app-nav-bar-not-log *ngIf="!this.service.isloggedin"></app-nav-bar-not-log>
+
+
+   <div class="container mt-3">
+
+    <Span style="font-size: 20px; "><b>Movies</b></Span>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <select class="form-control" id="sel1"  #selector>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+         <option>2019</option>
+        </select>
+      </div>
+      <div class="col-lg-2"><button class="btn btn-light" (click)='setPopular(selector.value)'>Search</button></div>
+      <div class="col-lg-6"></div>
+    </div>
+
+   
+
+    
+      <div class=row>
+
+        <div class="col-lg-6 mt-3" *ngFor="let array of arrays">
+
+
+
+            <div class="card shadow "  >
+              
+              <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                <img class="card-img-top size " src={{array.mov_image_url}} alt="Card image cap">
+              </div>
+             
+                <div class="col-lg-7 col-md-7 col-sm-7">
+
+
+                  <div class="row mt-2">
+                    <div class="col-lg-3">
+                      <div class="continer">
+                        
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="progress blue">
+                                        <span class="progress-left">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                        <span class="progress-right">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                        <div class="progress-value">100%</div>
+                                    </div>
+                                  </div>
+                              
+                               
+                            </div>
+                            </div>
+
+
+                    </div>
+                   
+                    <div class="col-lg-9 marg ">
+                        <div class="card-title mt-3 "><strong>{{array.mov_name}}({{array.year}})</strong></div>
+                        <h6>{{(array.avg_rating*100)/10}}%</h6>
+                    </div>
+                  </div>
+
+                 
+
+                <div class="card-body">  
+                 
+                  
+                  <p class="card-text">{{array.mov_description |slice:0:90}}..</div>
+                
+                <div class="card-footer">
+                  <a  class="card-link" style="color:black" [routerLink]="['/details',array.mov_id]">More Info</a>
+                  
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+        
+      </div>
+   </div>
+   <br><br><br><br>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+  

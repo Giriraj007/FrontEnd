@@ -1,0 +1,51 @@
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"  style="color:#01d277" >The Movie DataBase</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link colors" style="color:#01d277" routerLink='/main' >HOME <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color:#01d277" routerLink="/popular" >MOVIES</a>
+        </li>
+       
+       
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control  search" type="search" placeholder="Search" aria-label="Search" #search>
+        <span class="input-group-btn"><button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search">
+          </i>
+        </button></span>
+
+
+
+      </form>
+  
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div class="dropdown ">
+          <button class="btn btn-primary size dropdown-toggle " data-toggle="dropdown" style="margin-right:100px;">G</button>
+          <div class="dropdown-menu dropdown-menu-left">
+              <a class="dropdown-item" routerLink='/Profile'>Profile</a>
+              <a class="dropdown-item" routerLink=''>Logout</a>
+              </div>
+            </div>
+          
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+ 
+  
+
+  

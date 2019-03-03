@@ -1,0 +1,57 @@
+.back{
+
+    background-color:#3a3736
+}
+
+
+.circular{
+    height: 150px;
+  width: 150px;
+  background-color: #01d277;
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  padding-top: 30px
+  
+
+
+
+}
+.shadow{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+}
+.cont{
+
+    margin-right: 10%;
+    margin-left:10%;
+}
+.textsize{
+    font-size:40px;
+
+
+}
+
+.red{
+    color:red;
+}
+.size{
+
+    height:250px;
+    width:100%;
+}
+
+.iconcolor{
+
+    color:palevioletred;
+}
+.iconcolor2{
+    color:yellow;
+}
+
+
+
+
+
+
