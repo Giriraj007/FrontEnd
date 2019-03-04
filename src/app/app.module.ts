@@ -13,6 +13,7 @@ import { NarBarLoginComponent } from './nar-bar-login/nar-bar-login.component'
 import { Pipe, PipeTransform } from '@angular/core';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoginComponent } from './login/login.component';
     NarBarLoginComponent,
     FooterComponent,
     LoginComponent,
+    SignupComponent,
     
     
   ],

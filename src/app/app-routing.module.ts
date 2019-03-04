@@ -7,6 +7,8 @@ import { MovieDetailPageComponent } from './movie-detail-page/movie-detail-page.
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { NarBarLoginComponent } from './nar-bar-login/nar-bar-login.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path:"",component:NavBarNotLogComponent},
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:"details/:id",component:MovieDetailPageComponent},
   {path:"Profile",component:ProfilePageComponent},
   {path:"navbarlogin",component:NarBarLoginComponent},
-  {path:"footer",component:FooterComponent}
+  {path:"footer",component:FooterComponent},
+  {path:"login",component:LoginComponent},
+  {path:"signup",component:SignupComponent}
 
 ];
 

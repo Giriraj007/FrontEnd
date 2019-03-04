@@ -22,7 +22,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control  search" type="search" placeholder="Search" aria-label="Search" #search>
-        <span class="input-group-btn"><button type="submit" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search">
+        <span class="input-group-btn"><button type="button"  (click)="getMovie(search)" class="btn btn-primary search-btn" data-target="#search-form" name="q"><i class="fa fa-search">
           </i>
         </button></span>
 
